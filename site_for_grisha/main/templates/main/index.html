@@ -1,0 +1,31 @@
+{% extends 'main\layout.html' %}
+{% block content %}
+
+<center>
+    <div style="">
+        <form class="form-inline" action="" method="post" novalidate>
+            {% csrf_token %}
+            <div class="form-group mx-sm-3 mb-2" style="position: relative; left: 270px; top: 50px">
+
+                {{form.as_p}}
+
+                <button style="position: relative; left: 290px; top: -24px; width: 70px; height: 38px" type="submit"
+                        class="btn btn-primary">Поиск
+                </button>
+
+
+            </div>
+        </form>
+    </div>
+    <div>
+        <ul style="position: relative; left: 255px;">
+            {% for i, j, k in zip %}
+            <li style="position: relative; left: 0px; top: {{k}}px"><a href="{{j}}" style="position: relative; left: -110px;"><b><font color="blue"
+                                                                                               face="cursive">{{i}}</font></b></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</center>
+
+{% endblock %}

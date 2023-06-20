@@ -1,0 +1,68 @@
+{% extends 'main\layout.html' %}
+{% block content %}
+<center>
+    <div>
+        <form class="form-inline" action="" method="post" novalidate>
+            {% csrf_token %}
+            <div style="position: relative; left: 2px; top: -14px">
+                {{form.as_p}}
+
+                <button style="position: absolute; left: 930px; top: 94px; width: 70px; height: 38px" type="submit"
+                        class="btn btn-primary">Поиск
+                </button>
+            </div>
+        </form>
+    </div>
+    <style>
+   li {
+    list-style-type: none;
+   }
+
+
+
+
+
+
+    </style>
+    <div>
+        <!--        <ul style="position: relative; left: 155px">-->
+        <!--            {% for i, k, a in zip %}-->
+        <!--            <li style="position: relative; top: {{k}}px"><a href="#"-->
+        <!--                                                            onclick="document.querySelector('audio').play()"><b>-->
+        <!--                {{i}} </b></a></li>-->
+        <!--            {% endfor %}-->
+
+        <!--        </ul>-->
+
+        <div style="position: relative; left: 335px;">
+            {% for i, k, a in zip %}
+            <div style="position: relative; top: {{k}}px;">
+            <label style="position: relative; top: -12px">
+                {{i}}:
+            </label>
+            <audio controls style=" height: 35px; width: 270px; ">
+
+
+
+
+                <source style="position: relative;"
+                        src="http://127.0.0.1:8000/media/{{a}}" type="audio/mp3" class="form-control">
+
+
+
+
+            </audio>
+            </div>
+            {% endfor %}
+        </div>
+
+
+        <!--        <audio controls>-->
+
+        <!--            <source style="position: relative; top: 85px" src="http://127.0.0.1:8000/media/Anivar_-_Дышать_Remix.mp3" type="audio/mp3"><b></b></source>-->
+
+        <!--        </audio>-->
+
+    </div>
+</center>
+{% endblock %}

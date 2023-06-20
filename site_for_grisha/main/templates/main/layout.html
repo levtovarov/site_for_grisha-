@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" scroll="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Fandomizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/media/favicon.ico" type="image/vnd.microsoft.icon"
+          sizes="32x32">
+    <link rel="apple-touch-icon image_src" href="http://127.0.0.1:8000/media/favicon.ico"
+          type="image/vnd.microsoft.icon">
+</head>
+<body>
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark"
+     style="width: 230px; height: 700px; position: absolute">
+    <a href="/#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+        </svg>
+        <span class="fs-4">Fandomizer</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li>
+            <a href="/#" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+                </svg>
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="/admin" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+
+                </svg>
+                Админка
+            </a>
+        </li>
+        <li>
+            <a href="/cover_upload" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+
+                </svg>
+                Загрузить кавер
+            </a>
+        </li>
+        <li>
+            <a href="/forum" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+
+                </svg>
+                Форум с каверами
+            </a>
+        </li>
+        <li>
+            <a href="/about_us" class="nav-link text-white">
+                <svg class="bi me-2" width="16" height="16">
+
+                </svg>
+                Про нас
+            </a>
+        </li>
+    </ul>
+</div>
+<style>
+        .image-container{
+            background: url(http://127.0.0.1:8000/media/concert.png);
+            width: 1200px;
+            height: 730px;
+            background-attachment: fix;
+            background-position: 230px left;
+            background-position: -50px top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-size: 1200px 730px;
+        }
+
+
+
+</style>
+<style>
+    html, body{
+    width: 815px;
+    max-width: 815px;
+
+    }
+li {
+    list-style-type: none;
+   }
+
+</style>
+
+<div class="image-container" style="width: 1200px; height: 730px; position: fixed; left: 230px; top: -50px"></div>
+{% block content %}
+{% endblock %}
+<script type="text/javascript">
+
+
+                    elems = document.querySelectorAll('.errorlist');
+                    for(i=0; i<elems.length; i++) {
+                    elems[i].parentNode.removeChild(elems[i]);
+                    }
+
+
+
+</script>
+</body>
+</html>

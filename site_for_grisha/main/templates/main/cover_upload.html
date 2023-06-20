@@ -1,0 +1,15 @@
+{% extends 'main\layout.html' %}
+{% block content %}
+<div>
+    <form class="form-inline" action="" method="post" enctype="multipart/form-data" novalidate="novalidate">
+        {% csrf_token %}
+        <div class="form-group mx-sm-3 mb-2" style="position: relative; left: 550px; top: 80px;">
+            {{form.as_p}}
+
+            <button style="width: 90px; height: 38px" type="submit"
+                    class="btn btn-primary">Загрузить
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
